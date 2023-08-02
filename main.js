@@ -19,14 +19,7 @@ function modelLoaded() {
     console.log('PoseNet se inicializo');
 }
 
-function draw() {
-    background('#969A97');
 
-    document.getElementById("square_side").innerHtml = "El ancho y alto del cuadrado sera= " + difference + "px";
-    fill('#660066');
-    stroke('#99ff66');
-    square(noseX, noseY, difference);
-}
 
 function gotPoses(results)
 {
@@ -42,4 +35,13 @@ function gotPoses(results)
         difference = floor(leftWristX - rightWrist);
         console.log("leftWristX = " + leftWristX + " rightWristX = "+ rightWristX + " difference = " + difference);
     }
+}
+
+function draw() {
+    background('#969A97');
+
+    document.getElementById("square_side").innerHtml = "El ancho y alto del cuadrado sera= " + difference + "px";
+    fill('#660066');
+    stroke('#99ff66');
+    square(noseX, noseY, difference);
 }
